@@ -13,22 +13,29 @@ export default {
       type: "string",
     },
     {
-      title: "Time",
-      name: "time",
+      title: "Description",
+      name: "description",
       type: "string",
     },
     {
-      title: 'Day',
-      name: 'selectedDay',
-      type: 'reference',
-      to: [{ type: 'day' }]
-    }
+      title: "Location",
+      name: "location",
+      type: "string",
+    },
+    {
+      title: "Date & Time",
+      name: "datetime",
+      type: "datetime",
+      options: {
+        dateFormat: 'DD-MM-YYYY',
+        timeFormat: 'HH:mm',
+      }
+    },
   ],
   preview: {
     select: {
       title: 'name',
-      subtitle: 'selectedDay.day',
-      description: 'time'
+      description: 'datetime'
     }
   }
 }
